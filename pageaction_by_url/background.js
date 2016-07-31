@@ -2,6 +2,19 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+
+console.log(chrome)
+
+chrome.tabs.onCreated.addListener(function(tab) {
+  alert(tab.index)
+  appendToLog('tabs.onCreated --'
+              + ' window: ' + tab.windowId
+              + ' tab: '    + tab.id
+              + ' index: '  + tab.index
+              + ' url: '    + tab.url);
+});
+
+
 // When the extension is installed or upgraded ...
 chrome.runtime.onInstalled.addListener(function() {
   // Replace all rules ...

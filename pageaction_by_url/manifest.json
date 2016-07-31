@@ -6,13 +6,18 @@
     "scripts": ["background.js"],
     "persistent": false
   },
-  "page_action" :
+  /*"page_action" :
   {
     "default_icon" : "icon-19.png",
     "default_title" : "There's a 'G' in this URL!"
-  },
-  "permissions" : [
-    "declarativeContent"
+  },*/
+  "page_action": {
+  "default_icon": "icon-19.png",
+  "default_title": "Google Mail",
+  "default_popup": "ok.html"
+},
+   "permissions" : [
+    "declarativeContent", "contextMenus", "notifications"
   ],
   "icons" : {
     "48" : "icon-48.png",
